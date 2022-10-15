@@ -1,10 +1,7 @@
-1. Como usuário desejaria fazer login para acessar o sistema
-2. Como Professor desejaria consultar meu extrato para saber  todos meus gastos e saldo.
-3. Como Professor desejaria consultar minhas transações para saber todo meu histórico.
-4. Como Professor desejaria enviar moedas para meus alunos
-5. Como Aluno desejaria fazer cadastro para usar o sistema.
-6. Como Aluno desejaria usar o meu saldo disponível para resgatar vantagens.
-7. Como Aluno desejaria consultar meu extrato para saber todos meus gastos e saldo.
-8. Como Aluno desejaria consultar minhas transações para saber todo meu histórico.
-9. Como Empresa desejaria fazer cadastro para usar o sistema.
-10. Como Empresa desejaria cadastrar as vantagens para os alunos usarem.
+- US01: Como Usuário desejaria fazer login para acessar o sistema
+- US02: Como Professor desejaria distribuir moedas para meus alunos
+- US03: Como Usuário de Consulta (Professor/Aluno) desejaria consultar meu extrato para saber todos meus gastos e saldo.
+- US04: Como Aluno desejo resgatar vantagens com as moedas que ganhei.
+- US05: Como Usuário (Professor/Aluno/Empresa) desejaria receber notificação sempre que uma transação, relacionada a mim, ocorrer.
+- US06: Como Usuário de Cadastro (Aluno/Empresa) desejaria fazer cadastro para usar o sistema.
+- US07: Como Empresa desejaria cadastrar as vantagens para os alunos usarem.
