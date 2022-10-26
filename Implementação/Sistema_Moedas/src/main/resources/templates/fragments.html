@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:fragment="head">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title th:include="::#titlePage"></title>
+	<script th:include="::#personalScript"></script>
+	<style type="text/css">
+		.form {
+			max-width: 900px;
+			min-height: 500px;
+			padding: 12.5px;
+			border-radius: 20px;
+			border: #18578d 1.5px solid;
+			box-shadow: #154873 2px 2px;
+		}
+
+		.form-control, .form-select {
+			border: none;
+			border-bottom: 2px #154873 solid;
+			border-radius: 0;
+		}
+
+		.form-invalid {
+			border-bottom: 3px #f00 solid !important;
+		}
+
+		.form-control:read-only, .form-control:disabled {
+			background: none;
+			border-bottom: 2px #474747 solid;
+		}
+
+		.read-only {
+			color: #474747 !important;
+		}
+
+		.form-control:focus, .form-select:focus {
+			outline: none !important;
+			box-shadow: none !important;
+			border-bottom: 3px #18578d solid;
+			height: calc(3.5rem + 4px)
+		}
+
+		.form-login {
+			max-width: 450px;
+		}
+
+		.error {
+			color: #f00;
+		}
+
+		input[type='radio'].form-check-input:checked {
+			outline: #212529 !important;
+			box-shadow: none !important;
+			border: #18578d !important;
+			background: #212529 !important;
+			color: #212529 !important;
+		}
+
+		header {
+			min-height: 50px;
+			background: #18578d;
+			padding: 15px;
+		}
+
+		header a {
+			color: white !important;
+		}
+
+		header a i:hover {
+			font-size: 2.5rem;
+		}
+	</style>
+</head>
+
+<body>
+
+	<header th:fragment="header" class="container-fluid">
+		<div class="row align-items-center">
+			<a class="col-2" href="/"><i class="fa-solid fa-house fa-2x"></i></a>
+			<div class="col"></div>
+			<a class="col-1" sec:authorize="!isAuthenticated()" href="/usuario/new">Cadastrar-se</a>
+			<a class="col-1" sec:authorize="!isAuthenticated()" href="/login">Login</a>
+			<a class="col-1" sec:authorize="isAuthenticated()" href="/logout">Sair</a>
+			<a class="col-1" sec:authorize="hasRole('EMPRESA')" href="/empresa">Perfil</a>
+			<a class="col-1" sec:authorize="hasRole('ALUNO')" href="/aluno">Perfil</a>
+		</div>
+	</header>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+
+	</body>
+
+</html>
